@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FFF6F1">
+<title>ぷにっとファイト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 共通のグラデーション定義（ペット・モフラで使い回す） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="g-pet" cx="42%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#FFF3EE"/>
+      <stop offset="100%" stop-color="#FFE1D8"/>
+    </radialGradient>
+    <radialGradient id="g-mofu" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#FFFBEA"/>
+      <stop offset="65%" stop-color="#FFEDB5"/>
+      <stop offset="100%" stop-color="#FFD98C"/>
+    </radialGradient>
+    <linearGradient id="g-castle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD6E3"/>
+      <stop offset="100%" stop-color="#F8B4CB"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div id="app" class="app">
+  <div class="bg-blob b1"></div><div class="bg-blob b2"></div><div class="bg-blob b3"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-name" id="hdr-name">ぷにっとファイト</span>
+      <span class="brand-sub" id="hdr-area"></span>
+    </div>
+    <div class="top-right">
+      <span class="chip streak" id="hdr-streak" title="連続きろく日数">🌸 0日</span>
+      <button class="icon-btn" id="btn-settings" aria-label="せってい">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7Zm7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98l-.38-2.65A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.49.42l-.38 2.65c-.61.25-1.17.58-1.69.98l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66a.5.5 0 0 0-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.04.24.25.42.49.42h4c.25 0 .45-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1.01c.22.08.49 0 .61-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.66Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ホーム -->
+    <section class="tab active" id="tab-home">
+      <div class="card castle-card" id="castle-card"></div>
+
+      <div class="stage" id="stage">
+        <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+        <div class="hill h1"></div><div class="hill h2"></div>
+        <div class="pet-wrap" id="pet-wrap">
+          <div class="barrier" id="barrier"></div>
+          <div class="bubble" id="bubble"></div>
+          <div class="pet" id="pet"></div>
+          <div class="pet-shadow"></div>
+        </div>
+        <div class="army-label" id="army-label"></div>
+        <div class="monsters" id="monsters"></div>
+      </div>
+
+      <div class="card today-card" id="today-card"></div>
+
+      <div class="actions">
+        <button class="clay-btn peach" id="btn-meal"><span class="ico">🍙</span>たべた</button>
+        <button class="clay-btn mint" id="btn-ex"><span class="ico">✨</span>うごいた</button>
+      </div>
+      <button class="ghost-btn" id="btn-weight">⚖️ 体重をはかった</button>
+    </section>
+
+    <!-- きろく -->
+    <section class="tab" id="tab-log"></section>
+    <!-- あしあと -->
+    <section class="tab" id="tab-history"></section>
+    <!-- おしゃれ -->
+    <section class="tab" id="tab-closet"></section>
+  </main>
+
+  <nav class="tabbar">
+    <button class="tab-btn active" data-tab="home"><span>🏡</span>ホーム</button>
+    <button class="tab-btn" data-tab="log"><span>📝</span>きろく</button>
+    <button class="tab-btn" data-tab="history"><span>🐾</span>あしあと</button>
+    <button class="tab-btn" data-tab="closet"><span>🎀</span>おしゃれ</button>
+  </nav>
+
+  <div class="sheet-backdrop" id="sheet-backdrop"></div>
+  <div class="sheet" id="sheet"></div>
+  <div class="modal-layer" id="modal"></div>
+  <div class="toast" id="toast"></div>
+  <div class="onboard" id="onboard"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
