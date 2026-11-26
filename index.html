@@ -14,11 +14,24 @@
 <!-- 共通のグラデーション定義（ペット・モフラで使い回す） -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <radialGradient id="g-pet" cx="42%" cy="35%" r="75%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="70%" stop-color="#FFF3EE"/>
-      <stop offset="100%" stop-color="#FFE1D8"/>
+    <radialGradient id="mp-body" cx="43%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#FBF5EF"/>
+      <stop offset="100%" stop-color="#F0E0D5"/>
     </radialGradient>
+    <!-- もちプーの垂れ耳（巻き毛の房）。右耳は左右反転して使う -->
+    <g id="mp-ear" fill="#E9BFA0" stroke="#D9A98A" stroke-width="1.4">
+      <circle cx="38" cy="104" r="12"/><circle cx="33" cy="116" r="12"/><circle cx="34" cy="130" r="12"/>
+      <circle cx="38" cy="143" r="11"/><circle cx="48" cy="149" r="10"/><circle cx="49" cy="114" r="10"/>
+      <path d="M32 108q9 -7 8 2q-2 5 -6 1M30 131q9 -7 8 2q-2 5 -6 1M40 146q8 -6 7 2q-2 4 -5 1" fill="none" stroke="#C8947A" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- 頭のおだんご -->
+    <g id="mp-top">
+      <g fill="#E9BFA0" stroke="#D9A98A" stroke-width="1.4">
+        <circle cx="77" cy="68" r="15"/><circle cx="88" cy="57" r="15"/><circle cx="103" cy="55" r="16"/>
+        <circle cx="118" cy="60" r="15"/><circle cx="128" cy="71" r="13"/><circle cx="99" cy="72" r="14"/>
+      </g>
+      <path d="M79 66q8 -7 7 2q-2 4 -5 1M96 53q9 -7 8 2q-2 5 -6 1M115 66q8 -7 7 2q-2 4 -5 1" fill="none" stroke="#C8947A" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
     <radialGradient id="g-mofu" cx="40%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#FFFBEA"/>
       <stop offset="65%" stop-color="#FFEDB5"/>

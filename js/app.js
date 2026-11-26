@@ -48,15 +48,15 @@ const ACTIVITY = [
 
 /* ---------- 着せ替えアイテム（ペットの200×200座標系で描画） ---------- */
 const ITEMS = [
-  { id: 'ribbon', vb: '106 48 56 56', name: 'ももいろリボン', svg: `<g transform="translate(134 70) rotate(18)"><ellipse cx="-11" cy="0" rx="12" ry="8" fill="#FF9EB8"/><ellipse cx="11" cy="0" rx="12" ry="8" fill="#FF9EB8"/><circle r="5" fill="#F27C9E"/><path d="M-3 4 l-6 12 M3 4 l6 12" stroke="#F27C9E" stroke-width="4" stroke-linecap="round"/></g>` },
-  { id: 'flower', vb: '46 52 40 40', name: 'おはなピン', svg: `<g transform="translate(66 72)">${[0, 72, 144, 216, 288].map(a => `<ellipse cx="0" cy="-8" rx="6" ry="8" fill="#FFFFFF" stroke="#FFD1DC" stroke-width="1.5" transform="rotate(${a})"/>`).join('')}<circle r="5" fill="#FFE59E"/></g>` },
-  { id: 'beret', vb: '52 22 96 96', name: 'ラベンダーベレー', svg: `<g><ellipse cx="100" cy="70" rx="44" ry="15" fill="#CDBDFF"/><ellipse cx="100" cy="66" rx="40" ry="11" fill="#DCD0FF"/><rect x="97" y="49" width="6" height="9" rx="3" fill="#A996F2"/></g>` },
-  { id: 'crown', vb: '72 32 56 56', name: 'ちいさな王冠', svg: `<g transform="translate(100 60)"><path d="M-20 6 L-22 -12 L-10 -2 L0 -16 L10 -2 L22 -12 L20 6 Z" fill="#FFE59E" stroke="#F5C866" stroke-width="2" stroke-linejoin="round"/><circle cx="0" cy="-2" r="3" fill="#FF9EB8"/></g>` },
-  { id: 'star', vb: '116 54 40 40', name: 'おほしさまピン', svg: `<g transform="translate(136 74) rotate(12)"><path d="M0 -12 L3.5 -4 L12 -3.5 L5.5 2 L7.5 10.5 L0 6 L-7.5 10.5 L-5.5 2 L-12 -3.5 L-3.5 -4 Z" fill="#FFE59E" stroke="#F5C866" stroke-width="1.5" stroke-linejoin="round"/></g>` },
-  { id: 'sprout', vb: '80 34 40 40', name: 'ふたばちゃん', svg: `<g transform="translate(100 62)"><path d="M0 2 V-12" stroke="#78CFB2" stroke-width="3" stroke-linecap="round"/><ellipse cx="-8" cy="-14" rx="9" ry="5" fill="#A9E8D2" transform="rotate(-25 -8 -14)"/><ellipse cx="8" cy="-14" rx="9" ry="5" fill="#A9E8D2" transform="rotate(25 8 -14)"/></g>` },
-  { id: 'glasses', vb: '60 78 80 80', name: 'まんまるメガネ', svg: `<g fill="none" stroke="#A48C98" stroke-width="3"><circle cx="78" cy="118" r="13"/><circle cx="122" cy="118" r="13"/><path d="M91 118 Q100 112 109 118"/></g>` },
-  { id: 'cherry', vb: '48 54 34 34', name: 'さくらんぼピン', svg: `<g transform="translate(64 70)"><path d="M0 -14 Q-2 -4 -6 4 M0 -14 Q4 -4 7 5" stroke="#78CFB2" stroke-width="2" fill="none"/><circle cx="-6" cy="7" r="6" fill="#FF7E9E"/><circle cx="7" cy="8" r="6" fill="#FF7E9E"/><circle cx="-8" cy="5" r="1.6" fill="#fff"/><circle cx="5" cy="6" r="1.6" fill="#fff"/></g>` },
-  { id: 'heart', vb: '136 126 28 28', name: 'ほっぺハート', svg: `<g transform="translate(150 140)"><path d="M0 4 C-8 -2 -6 -9 0 -5 C6 -9 8 -2 0 4 Z" fill="#FF9EB8"/></g>` },
+  { id: 'ribbon', vb: '108 28 56 56', name: 'ももいろリボン', svg: `<g transform="translate(136 56) rotate(18)"><ellipse cx="-11" cy="0" rx="12" ry="8" fill="#FF9EB8"/><ellipse cx="11" cy="0" rx="12" ry="8" fill="#FF9EB8"/><circle r="5" fill="#F27C9E"/><path d="M-3 4 l-6 12 M3 4 l6 12" stroke="#F27C9E" stroke-width="4" stroke-linecap="round"/></g>` },
+  { id: 'flower', vb: '48 40 40 40', name: 'おはなピン', svg: `<g transform="translate(68 60)">${[0, 72, 144, 216, 288].map(a => `<ellipse cx="0" cy="-8" rx="6" ry="8" fill="#FFFFFF" stroke="#FFD1DC" stroke-width="1.5" transform="rotate(${a})"/>`).join('')}<circle r="5" fill="#FFE59E"/></g>` },
+  { id: 'beret', vb: '50 -5 100 100', name: 'ラベンダーベレー', svg: `<g><ellipse cx="100" cy="50" rx="48" ry="16" fill="#CDBDFF"/><ellipse cx="100" cy="45" rx="43" ry="12" fill="#DCD0FF"/><rect x="97" y="27" width="6" height="9" rx="3" fill="#A996F2"/></g>` },
+  { id: 'crown', vb: '72 14 56 56', name: 'ちいさな王冠', svg: `<g transform="translate(100 40)"><path d="M-20 6 L-22 -12 L-10 -2 L0 -16 L10 -2 L22 -12 L20 6 Z" fill="#FFE59E" stroke="#F5C866" stroke-width="2" stroke-linejoin="round"/><circle cx="0" cy="-2" r="3" fill="#FF9EB8"/></g>` },
+  { id: 'star', vb: '114 42 40 40', name: 'おほしさまピン', svg: `<g transform="translate(134 62) rotate(12)"><path d="M0 -12 L3.5 -4 L12 -3.5 L5.5 2 L7.5 10.5 L0 6 L-7.5 10.5 L-5.5 2 L-12 -3.5 L-3.5 -4 Z" fill="#FFE59E" stroke="#F5C866" stroke-width="1.5" stroke-linejoin="round"/></g>` },
+  { id: 'sprout', vb: '83 16 40 40', name: 'ふたばちゃん', svg: `<g transform="translate(103 40)"><path d="M0 2 V-12" stroke="#78CFB2" stroke-width="3" stroke-linecap="round"/><ellipse cx="-8" cy="-14" rx="9" ry="5" fill="#A9E8D2" transform="rotate(-25 -8 -14)"/><ellipse cx="8" cy="-14" rx="9" ry="5" fill="#A9E8D2" transform="rotate(25 8 -14)"/></g>` },
+  { id: 'glasses', vb: '60 91 80 80', name: 'まんまるメガネ', svg: `<g fill="none" stroke="#A48C98" stroke-width="3"><circle cx="78" cy="131" r="13"/><circle cx="122" cy="131" r="13"/><path d="M91 131 Q100 125 109 131"/></g>` },
+  { id: 'cherry', vb: '54 42 34 34', name: 'さくらんぼピン', svg: `<g transform="translate(70 58)"><path d="M0 -14 Q-2 -4 -6 4 M0 -14 Q4 -4 7 5" stroke="#78CFB2" stroke-width="2" fill="none"/><circle cx="-6" cy="7" r="6" fill="#FF7E9E"/><circle cx="7" cy="8" r="6" fill="#FF7E9E"/><circle cx="-8" cy="5" r="1.6" fill="#fff"/><circle cx="5" cy="6" r="1.6" fill="#fff"/></g>` },
+  { id: 'heart', vb: '122 142 28 28', name: 'ほっぺハート', svg: `<g transform="translate(136 156)"><path d="M0 4 C-8 -2 -6 -9 0 -5 C6 -9 8 -2 0 4 Z" fill="#FF9EB8"/></g>` },
 ];
 
 /* ---------- 小さなユーティリティ ---------- */
@@ -249,32 +249,47 @@ function mirror() {
 }
 
 /* =========================================================
-   SVG：ペット「もちぷに」とモンスター「モフラ」
+   SVG：ペット「もちプー」とモンスター「モフラ」
    ========================================================= */
+// もちプー：つるんとしたお餅の体 × トイプードルの巻き毛（耳・頭のおだんご）
+// 共通パーツ（#mp-body, #mp-ear）は index.html の <defs> に1つだけ置いている
+const PET_FACE = {
+  normal: {
+    earDy: 0,
+    eyes: `<g class="blink"><ellipse cx="78" cy="131" rx="5.3" ry="7" fill="#5B4350"/><circle cx="76.5" cy="128.5" r="2" fill="#fff"/><circle cx="80.5" cy="133.5" r="1" fill="#fff"/></g>
+           <g class="blink"><ellipse cx="122" cy="131" rx="5.3" ry="7" fill="#5B4350"/><circle cx="120.5" cy="128.5" r="2" fill="#fff"/><circle cx="124.5" cy="133.5" r="1" fill="#fff"/></g>`,
+    nose: `<circle cx="100" cy="140" r="4.2" fill="#5B4350"/><circle cx="98.5" cy="138.5" r="1.2" fill="#fff"/>`,
+    mouth: `<path d="M91 148Q95 155 100 148Q105 155 109 148" fill="none" stroke="#5B4350" stroke-width="2.2"/>`,
+  },
+  happy: {
+    earDy: -10,
+    eyes: `<path d="M70 134Q78 123 86 134" fill="none" stroke="#5B4350" stroke-width="3"/><path d="M114 134Q122 123 130 134" fill="none" stroke="#5B4350" stroke-width="3"/>`,
+    nose: `<circle cx="100" cy="140" r="4.2" fill="#5B4350"/><circle cx="98.5" cy="138.5" r="1.2" fill="#fff"/>`,
+    mouth: `<path d="M89 148Q100 163 111 148Q111 161 100 163Q89 161 89 148Z" fill="#5B4350"/><path d="M96 158Q100 155 104 158" fill="none" stroke="#E8A9B0" stroke-width="3"/>`,
+  },
+  worried: {
+    earDy: 8,
+    eyes: `<g class="blink"><ellipse cx="78" cy="134" rx="5.3" ry="7" fill="#5B4350"/><circle cx="76.5" cy="134" r="2" fill="#fff"/><circle cx="80.5" cy="137" r="1" fill="#fff"/></g>
+           <g class="blink"><ellipse cx="122" cy="134" rx="5.3" ry="7" fill="#5B4350"/><circle cx="120.5" cy="134" r="2" fill="#fff"/><circle cx="124.5" cy="137" r="1" fill="#fff"/></g>`,
+    nose: `<circle cx="100" cy="143" r="4.2" fill="#5B4350"/><circle cx="98.5" cy="141.5" r="1.2" fill="#fff"/>`,
+    mouth: `<path d="M96 154Q100 151 104 154" fill="none" stroke="#5B4350" stroke-width="2"/><path d="M143 114Q138 123 143 127Q148 123 143 114Z" fill="#B5D8E8" stroke="#8EBACD" stroke-width="1"/>`,
+  },
+};
 function petSVG({ sx = 1, mood = 'normal', item = S.equipped } = {}) {
-  const eyes = mood === 'happy'
-    ? `<path d="M71 120 q7 -9 14 0" stroke="#5B4350" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M115 120 q7 -9 14 0" stroke="#5B4350" stroke-width="4" fill="none" stroke-linecap="round"/>`
-    : `<g class="blink"><ellipse cx="78" cy="118" rx="6.5" ry="8.5" fill="#5B4350"/><circle cx="80.5" cy="114.5" r="2.4" fill="#fff"/></g>
-       <g class="blink"><ellipse cx="122" cy="118" rx="6.5" ry="8.5" fill="#5B4350"/><circle cx="124.5" cy="114.5" r="2.4" fill="#fff"/></g>`;
-  const mouth = mood === 'worried'
-    ? `<path d="M94 138 q6 -5 12 0" stroke="#5B4350" stroke-width="3" fill="none" stroke-linecap="round"/>`
-    : `<path d="M93 133 q3.5 4.5 7 0 q3.5 4.5 7 0" stroke="#5B4350" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
-  const sweat = mood === 'worried' ? `<path d="M152 92 q6 9 0 13 q-6 -4 0 -13Z" fill="#BFE3FF" stroke="#9CCBF0" stroke-width="1.5"/>` : '';
+  const f = PET_FACE[mood] || PET_FACE.normal;
   const acc = item ? (ITEMS.find(i => i.id === item) || {}).svg || '' : '';
-  return `<svg viewBox="0 0 200 200" aria-label="もちぷに">
-    <g class="body-g" style="--sx:${sx.toFixed(3)}">
-      <ellipse cx="68" cy="66" rx="13" ry="25" fill="url(#g-pet)" stroke="#F1D3CB" stroke-width="2.5" transform="rotate(-16 68 66)"/>
-      <ellipse cx="132" cy="66" rx="13" ry="25" fill="url(#g-pet)" stroke="#F1D3CB" stroke-width="2.5" transform="rotate(16 132 66)"/>
-      <ellipse cx="68" cy="68" rx="6" ry="15" fill="#FFD3DE" transform="rotate(-16 68 68)"/>
-      <ellipse cx="132" cy="68" rx="6" ry="15" fill="#FFD3DE" transform="rotate(16 132 68)"/>
-      <ellipse cx="74" cy="183" rx="17" ry="8" fill="#FFE5DD" stroke="#F1D3CB" stroke-width="2"/>
-      <ellipse cx="126" cy="183" rx="17" ry="8" fill="#FFE5DD" stroke="#F1D3CB" stroke-width="2"/>
-      <path d="M100 70 C152 70 176 108 176 146 C176 176 146 186 100 186 C54 186 24 176 24 146 C24 108 48 70 100 70 Z" fill="url(#g-pet)" stroke="#F1D3CB" stroke-width="2.5"/>
-      <ellipse cx="72" cy="96" rx="16" ry="8" fill="#fff" opacity=".9" transform="rotate(-20 72 96)"/>
-      ${eyes}
-      <ellipse cx="62" cy="136" rx="12" ry="7" fill="#FFB3C6" opacity=".6"/>
-      <ellipse cx="138" cy="136" rx="12" ry="7" fill="#FFB3C6" opacity=".6"/>
-      ${mouth}${sweat}${acc}
+  return `<svg viewBox="0 0 200 200" aria-label="もちプー">
+    <g class="body-g" style="--sx:${sx.toFixed(3)}" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="70" cy="177" rx="13" ry="9" fill="#F0E0D5" stroke="#D9C2B6" stroke-width="2.5"/>
+      <ellipse cx="130" cy="177" rx="13" ry="9" fill="#F0E0D5" stroke="#D9C2B6" stroke-width="2.5"/>
+      <path d="M100 71C65 70 42 88 32 119C22 151 35 178 68 181Q100 187 132 181C165 178 178 151 168 119C158 88 135 70 100 71Z" fill="url(#mp-body)" stroke="#D9C2B6" stroke-width="2.5"/>
+      <use href="#mp-ear" transform="translate(0 ${f.earDy})"/>
+      <use href="#mp-ear" transform="translate(200 ${f.earDy}) scale(-1 1)"/>
+      <use href="#mp-top"/>
+      <g fill="#D9A98A"><circle cx="65" cy="178" r="3"/><circle cx="135" cy="178" r="3"/></g>
+      <ellipse cx="62" cy="143" rx="10" ry="6" fill="#E8A9B0" opacity=".6"/>
+      <ellipse cx="138" cy="143" rx="10" ry="6" fill="#E8A9B0" opacity=".6"/>
+      ${f.eyes}${f.nose}${f.mouth}${acc}
     </g>
   </svg>`;
 }
@@ -863,7 +878,7 @@ function renderOnboard(editing = false) {
   ob.innerHTML = `<div class="onboard-inner">
     <div class="hero">${petSVG({ mood: 'happy', item: null })}</div>
     <h1>${editing ? 'せってい' : 'はじめまして！'}</h1>
-    <p class="lead">${editing ? 'プロフィールを変えると、消費カロリーの計算に反映されるよ。' : 'わたしは あなたの分身「もちぷに」。<br>食べたぶんは もこもこの「モフラ」になって攻めてくるよ。<br>いっしょに動いて、やっつけよう！'}</p>
+    <p class="lead">${editing ? 'プロフィールを変えると、消費カロリーの計算に反映されるよ。' : 'わたしは あなたの分身「もちプー」。<br>食べたぶんは もこもこの「モフラ」になって攻めてくるよ。<br>いっしょに動いて、やっつけよう！'}</p>
     <div class="card">
       <div class="field"><label>この子の名前</label><input class="input" id="o-name" maxlength="10" value="${esc(p.petName)}"></div>
       <div class="field"><label>あなたの性別（基礎代謝の計算に使うよ）</label>
