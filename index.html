@@ -9,6 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
 </head>
 <body>
 <!-- 共通のグラデーション定義（ペット・モフラで使い回す） -->
@@ -72,6 +78,7 @@
           <div class="barrier" id="barrier"></div>
           <div class="bubble" id="bubble"></div>
           <div class="pet" id="pet"></div>
+          <div class="pet3d" id="pet3d"></div>
           <div class="pet-shadow"></div>
         </div>
         <div class="army-label" id="army-label"></div>
@@ -110,5 +117,7 @@
 </div>
 
 <script src="js/app.js"></script>
+<!-- ホーム画面の3Dペット（使えない環境では2DのSVGのまま） -->
+<script type="module" src="js/home3d.js"></script>
 </body>
 </html>

@@ -366,12 +366,27 @@ function renderCastle() {
     </div>`;
 }
 
+const pet3d = () => (window.Pet3D && window.Pet3D.ready ? window.Pet3D : null);
 function renderPet(L) {
   const [mood, line] = moodAndLine(L);
   lastMood = mood;
   const shape = petShape();
-  $('#pet').innerHTML = petSVG({ sx: shape.sx, mood });
+  const p3 = pet3d();
+  if (p3) {
+    // 3Dペット：表情・体型（SVG版の横幅0.86〜1.14倍 → -1〜1）・着せ替えを反映
+    p3.setMood(mood);
+    p3.setPlump(clamp((shape.sx - 1) / 0.14, -1, 1));
+    p3.setItem(S.equipped);
+  } else {
+    $('#pet').innerHTML = petSVG({ sx: shape.sx, mood });
+  }
   $('#bubble').textContent = line;
+}
+function petJump() {
+  const p3 = pet3d();
+  if (p3) { p3.jump(); return; }
+  const pet = $('#pet');
+  pet.classList.remove('jump'); void pet.offsetWidth; pet.classList.add('jump');
 }
 
 function syncMonsters(remaining, animate = true) {
@@ -449,9 +464,9 @@ function sparkAt(el, chars = ['✨', '💫', '⭐']) {
   }
 }
 function attackAnimation(done) {
-  const stage = $('#stage'), pet = $('#pet');
-  pet.classList.remove('jump'); void pet.offsetWidth; pet.classList.add('jump');
-  const sr = stage.getBoundingClientRect(), pr = pet.getBoundingClientRect();
+  const stage = $('#stage');
+  petJump();
+  const sr = stage.getBoundingClientRect(), pr = $('#pet-wrap').getBoundingClientRect();
   const targets = $$('.mofu:not(.poof)');
   const n = Math.max(3, Math.min(6, targets.length));
   for (let i = 0; i < n; i++) {
@@ -1045,12 +1060,15 @@ function bindOnce() {
   $('#btn-weight').addEventListener('click', openWeightSheet);
   $('#btn-settings').addEventListener('click', () => renderOnboard(true));
   $('#sheet-backdrop').addEventListener('click', closeSheet);
-  $('#pet').addEventListener('click', () => {
-    const pet = $('#pet');
-    pet.classList.remove('jump'); void pet.offsetWidth; pet.classList.add('jump');
+  const onPetTap = () => {
+    petJump();
     $('#bubble').textContent = pick(CHEERS);
-    sparkAt(pet, ['💗', '✨', '🌸']);
-  });
+    sparkAt($('#pet-wrap'), ['💗', '✨', '🌸']);
+  };
+  $('#pet').addEventListener('click', onPetTap);
+  $('#pet3d').addEventListener('click', onPetTap);
+  // 3Dペットの準備ができたら、いまの表情・体型・着せ替えを反映
+  window.addEventListener('pet3d-ready', () => renderHome(false));
   setInterval(tick, 30000);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
 }

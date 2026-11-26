@@ -49,6 +49,11 @@
     box-shadow: 0 6px 14px rgba(242, 124, 158, .25), inset 0 -4px 0 rgba(0, 0, 0, .06), inset 0 2px 0 rgba(255, 255, 255, .6);
   }
   .btn.lav { background: linear-gradient(180deg, #EEE8FF, #D8CCFF); box-shadow: 0 6px 14px rgba(169, 150, 242, .25), inset 0 -4px 0 rgba(0, 0, 0, .06), inset 0 2px 0 rgba(255, 255, 255, .6); }
+  .select {
+    flex: 1; font: inherit; font-size: 13px; font-weight: 700; color: var(--cocoa);
+    padding: 8px 12px; border-radius: 14px; border: 0; background: #fff;
+    box-shadow: inset 0 2px 4px rgba(210, 160, 170, .25);
+  }
   .hint { text-align: center; font-size: 11px; color: var(--cocoa-l); margin-top: 8px; }
   #loading { position: fixed; inset: 0; display: grid; place-items: center; font-weight: 700; color: var(--cocoa-l); }
 </style>
@@ -78,6 +83,21 @@
     <span class="tiny">すっきり</span>
     <input type="range" id="plump" min="-1" max="1" step="0.01" value="0">
     <span class="tiny">まんまる</span>
+  </div>
+  <div class="row">
+    <span class="label">おしゃれ</span>
+    <select id="item" class="select">
+      <option value="">なし</option>
+      <option value="ribbon">ももいろリボン</option>
+      <option value="flower">おはなピン</option>
+      <option value="beret">ラベンダーベレー</option>
+      <option value="crown">ちいさな王冠</option>
+      <option value="star">おほしさまピン</option>
+      <option value="sprout">ふたばちゃん</option>
+      <option value="glasses">まんまるメガネ</option>
+      <option value="cherry">さくらんぼピン</option>
+      <option value="heart">ほっぺハート</option>
+    </select>
   </div>
   <div class="row btns">
     <button class="btn lav" id="spin">くるくる回転</button>
