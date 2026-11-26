@@ -808,6 +808,7 @@ function renderCloset() {
     <div class="card" style="text-align:center">
       <div class="closet-pet">${petSVG({ sx: shape.sx, mood: 'happy' })}</div>
       <b>${esc(S.profile.petName)}</b><div class="muted">いまの体型：${shape.label}</div>
+      <a class="ghost-btn" href="pet3d.html" style="display:block;margin-top:12px;text-decoration:none;color:inherit">🧸 3Dで見る</a>
     </div>
     <div class="card">
       <h3>🎀 おしゃれアイテム <span class="muted">${S.items.length} / ${ITEMS.length}</span></h3>
